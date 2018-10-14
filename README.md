@@ -1,4 +1,6 @@
 # Simple Graph lib:
+[![Build Status](https://travis-ci.org/arechesk/SimpleGraphLib.svg?branch=master)](https://travis-ci.org/arechesk/SimpleGraphLib)
+
 Should support 2 types of graphs - directed and undirected with 3 operations:
 
 addVertex - adds vertex to the graph
