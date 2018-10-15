@@ -7,4 +7,6 @@ interface Graph{
     void addEdge(Vertex source,Vertex target);
     List<Edge> getPath(Vertex source,Vertex target);
 
+    List<Vertex> out_neighbors(Vertex v);
+
 }
