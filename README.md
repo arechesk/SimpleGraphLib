@@ -10,7 +10,7 @@ addVertex - adds vertex to the graph
 
 addEdge - adds edge to the graph
 ```java
-   void addEdge(Vertex source,Vertex target)) 
+   void addEdge(Vertex source,Vertex target)
    ```
 
 getPath - returns a list of edges between 2 vertices (path doesn’t have to be optimal) 
