@@ -8,4 +8,9 @@ public class Edge {
         this.source=source;
         this.target=target;
     }
+
+    @Override
+    public String toString(){
+        return "("+source.getID()+", "+target.getID()+")";
+    }
 }

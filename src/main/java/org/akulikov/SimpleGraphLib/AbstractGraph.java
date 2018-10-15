@@ -10,6 +10,11 @@ abstract class AbstractGraph implements Graph{
         adjacentList.put(v, new ArrayList<>());
         return v;
     }
+    public synchronized Vertex addVertex(Vertex vertex) {
+        if(!adjacentList.containsKey(vertex))
+            adjacentList.put(vertex, new ArrayList<>());
+        return vertex;
+    }
     public abstract void addEdge(Vertex source, Vertex target);
     private Set<Vertex> used= new HashSet<>();
     public List<Vertex> dfs(Vertex source, Vertex target) {
