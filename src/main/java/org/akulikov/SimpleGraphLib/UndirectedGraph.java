@@ -22,4 +22,8 @@ public class UndirectedGraph implements Graph {
     public List<Edge> getPath(Vertex source, Vertex target) {
         return null;
     }
+    public List<Vertex> out_neighbors(Vertex v) {
+        return adjList.get(v);
+
+    }
 }
