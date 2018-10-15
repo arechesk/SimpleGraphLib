@@ -1,13 +1,22 @@
 # Simple Graph lib:
 [![Build Status](https://travis-ci.org/arechesk/SimpleGraphLib.svg?branch=master)](https://travis-ci.org/arechesk/SimpleGraphLib)
 
-Support 2 types of graphs - [directed](src/main/java/org/akulikov/SimpleGraphLib/DirectedGraph.java) and [undirected](src/main/java/org/akulikov/SimpleGraphLib/UndirectedGraph.java) with 3 operations:
+Support 2 types of [graphs](src/main/java/org/akulikov/SimpleGraphLib/AbstractGraph.java) - [directed](src/main/java/org/akulikov/SimpleGraphLib/DirectedGraph.java) and [undirected](src/main/java/org/akulikov/SimpleGraphLib/UndirectedGraph.java) with 3 operations:
 
-addVertex - adds vertex to the graph
+addVertex - adds vertex to the graph 
+```java
+   Vertex addVertex()
+   ```
 
 addEdge - adds edge to the graph
+```java
+   void addEdge(Vertex source,Vertex target)) 
+   ```
 
-getPath - returns a list of edges between 2 vertices (path doesn’t have to be optimal)
+getPath - returns a list of edges between 2 vertices (path doesn’t have to be optimal) 
+```java
+   List<Edge> getPath(Vertex source, Vertex target) 
+   ```
 
 ## Example:
 ```java
