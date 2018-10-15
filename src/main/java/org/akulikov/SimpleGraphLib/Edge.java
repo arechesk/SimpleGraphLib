@@ -5,5 +5,7 @@ public class Edge {
     Vertex target;
 
     public Edge(Vertex source, Vertex target) {
+        this.source=source;
+        this.target=target;
     }
 }

@@ -20,13 +20,18 @@ public class DirectedGraph implements Graph {
 
         used.add(source);
         List<Vertex> result= new ArrayList<>();
-        result.add(source);
+
         if(out_neighbors(source).contains(target))
         {
             result.add(target);
         }else{
-            result.addAll(out_neighbors(source).stream().filter(v-> !used.contains(v)).map(v-> dfs(v,target) ).filter(l->l.size()>0).findFirst().get());
+            result.addAll(out_neighbors(source).stream()
+                    .filter(v-> !used.contains(v))
+                    .map(v-> dfs(v,target) )
+                    .filter(l->l.size()>0).
+                            findFirst().orElse(new ArrayList<Vertex>()));
         }
+        if(result.size()>0)result.add(0,source);
         return result;
     }
 
@@ -37,6 +42,7 @@ public class DirectedGraph implements Graph {
         for(int i=0;i<path.size()-1;i++){
             result.add(new Edge(path.get(i),path.get(i+1)));
         }
+        used= new HashSet<>();
         return result;
     }
 

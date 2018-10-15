@@ -8,4 +8,9 @@ public class Vertex {
     public Vertex(){
         this.ID=VERTEX_COUNTER++;
     }
+
+    @Override
+    public int hashCode(){
+        return this.ID;
+    }
 }
